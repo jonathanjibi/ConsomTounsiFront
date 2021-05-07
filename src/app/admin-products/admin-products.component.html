@@ -1,0 +1,48 @@
+<mdb-navbar SideClass="navbar navbar-dark indigo">
+    <mdb-navbar-brand><a class="navbar-brand" href="#" (click)="toggleAjouter()">Ajouter produit</a></mdb-navbar-brand>
+    <mdb-navbar-brand><a class="navbar-brand" href="#" (click)="toggleListe()">Liste des produits</a></mdb-navbar-brand>
+</mdb-navbar>
+<div class="form-add-product container" *ngIf="ajouter">
+    <h2 class="text-center">Ajouter un produit</h2>
+    <div>
+        <div class="row">
+            <div class="form-group col-lg-6">
+                <label for="nameCateg">Name</label>
+                <input type="text" class="form-control" id="nameCateg" name="nameCateg">
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="categorie">Catégorie</label>
+                <input type="text" class="form-control" id="category" name="categorie">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="category-desc">Description</label>
+            <textarea name="description" id="category-desc" class="form-control" cols="30" rows="10"></textarea>
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-4">
+                <label for="qte-min">Quantité minimale</label>
+                <input type="number" class="form-control" id="qte-min" name="qte-min">
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-max">Quantité maximale</label>
+                <input type="number" class="form-control" id="qte-max" name="qtn-max">
+            </div>
+            <div class="form-group col-lg-4">
+                <label for="qte-inst">Quantité instantanée</label>
+                <input type="number" class="form-control" id="qte-inst" name="qtn-inst">
+            </div>
+        </div>
+        <div>
+            <label for="image-categ">Image</label>
+            <input type="file" class="" id="img-categ" name="img-categ">
+        </div>
+        <div class="btn-add-product">
+            <button class="btn btn-primary mr-3">Ajouter</button>
+            <button type="reset" class="btn btn-secondary">Annuler</button>
+        </div>
+    </div>
+</div>
+<div *ngIf="liste">
+    Liste des produits
+</div>
